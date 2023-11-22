@@ -1,0 +1,21 @@
+services:
+  spotify_integration.configuration:
+    class: Drupal\spotify_integration\Service\SpotifyConfigService
+    arguments: ['@config.factory', '@key.repository', '@state']
+  spotify_integration.request:
+    class: Drupal\spotify_integration\Service\SpotifyRequest
+    arguments: ['@http_client', '@spotify_integration.configuration']
+  spotify_integration.resource_factory:
+    class: Drupal\spotify_integration\Service\Resource\ResourceFactoryService
+    arguments: ['@spotify_integration.albums', '@spotify_integration.artists', '@spotify_integration.songs']
+
+  # Resources
+  spotify_integration.albums:
+    class: Drupal\spotify_integration\Service\Resource\AlbumService
+    arguments: ['@entity_type.manager', '@spotify_integration.request', '@spotify_integration.artists']
+  spotify_integration.artists:
+    class: Drupal\spotify_integration\Service\Resource\ArtistService
+    arguments: ['@entity_type.manager', '@spotify_integration.request']
+  spotify_integration.songs:
+    class: Drupal\spotify_integration\Service\Resource\SongService
+    arguments: ['@entity_type.manager', '@spotify_integration.request', '@spotify_integration.artists']

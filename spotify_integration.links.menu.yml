@@ -1,0 +1,13 @@
+spotify_integration.settings_form:
+  title: 'Spotify Integration'
+  description: 'Configure Spotify Integration.'
+  parent: system.admin_config_system
+  route_name: spotify_integration.settings_form
+  weight: 10
+
+spotify_integration.generate_content_form:
+  title: 'Spotify Integration'
+  description: 'Configure Spotify Integration.'
+  parent: system.admin_content
+  route_name: spotify_integration.generate_content_form
+  weight: 10

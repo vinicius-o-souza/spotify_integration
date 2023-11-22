@@ -1,0 +1,5 @@
+name: Spotify Integration
+type: module
+description: Provides integration functionality to the Spotify API
+package: Custom
+core_version_requirement: ^9 || ^10

@@ -1,0 +1,15 @@
+spotify_integration.settings_form:
+  path: '/admin/config/system/spotify-integration'
+  defaults:
+    _title: 'Spotify Integration settings'
+    _form: 'Drupal\spotify_integration\Form\SpotifySettingsForm'
+  requirements:
+    _permission: 'administer spotify_integration configuration'
+
+spotify_integration.generate_content_form:
+  path: '/admin/spotify-integration/generate-content'
+  defaults:
+    _title: 'Generate Content'
+    _form: 'Drupal\spotify_integration\Form\GenerateContentForm'
+  requirements:
+    _permission: 'administer spotify_integration configuration'

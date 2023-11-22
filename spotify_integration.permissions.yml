@@ -1,0 +1,4 @@
+administer spotify_integration configuration:
+  title: 'Administer spotify_integration configuration'
+  description: ''
+  restrict access: true
